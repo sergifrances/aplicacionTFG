@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:id="@+id/layout_introducirdatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_origen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etOrigen"
+                android:layout_width="275dp"
+                android:layout_height="match_parent"
+                android:hint="Tu ubicación" />
+
+            <Button
+                android:id="@+id/butOrigen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Buscar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_destino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etDestino"
+                android:layout_width="275dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/butDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Buscar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_botones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/calcular_ruta_escrito"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/pie" />
+
+            <ImageButton
+                android:id="@+id/calcular_ruta_escrito_bici"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/bici" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expandir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_introducirdatos"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/expander_bgrnd"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/routeInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/expandir"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:textColor="#FF000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0"
+            android:textColor="#FF000000"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"></org.osmdroid.views.MapView>
+
+        <LinearLayout
+            android:id="@+id/layout_primero"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/posActual"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/pie" />
+
+            <ImageButton
+                android:id="@+id/biciActual"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="0.25"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/bici" />
+
+
+            <Button
+                android:id="@+id/posSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.5"
+                android:text="salida" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_segundo"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/pie" />
+
+            <ImageButton
+                android:id="@+id/bici"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/holo_blue_light"
+                android:src="@drawable/bici" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_informacion"
+            android:layout_width="310dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/texto"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cantidad2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dificultadRuta"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/dificultadfacil" />
+
+            <ImageButton
+                android:id="@+id/cancelar_inf"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/cancelr" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cancelar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/cancelar_ruta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cancelc"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_itinerario"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/itinerario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/listasteps"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

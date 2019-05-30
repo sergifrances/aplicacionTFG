@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="direction_icons" translatable="false">
+        <!-- this list must match exactly with maneuver IDs of
+        http://open.mapquestapi.com/guidance/#maneuvertypes -->
+        <item>@mipmap/ic_empty</item> <!-- 0 -->
+        <item>@mipmap/ic_continue</item>
+        <item>@mipmap/ic_continue</item>
+        <item>@mipmap/ic_slight_left</item>
+        <item>@mipmap/ic_turn_left</item>
+        <item>@mipmap/ic_sharp_left</item> <!-- 5 -->
+        <item>@mipmap/ic_slight_right</item>
+        <item>@mipmap/ic_turn_right</item>
+        <item>@mipmap/ic_sharp_right</item>
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item> <!-- 10 -->
+        <item>@mipmap/ic_continue</item>
+        <item>@mipmap/ic_u_turn</item>
+        <item>@mipmap/ic_u_turn</item>
+        <item>@mipmap/ic_u_turn</item>
+        <item>@mipmap/ic_slight_left</item> <!-- 15 -->
+        <item>@mipmap/ic_slight_right</item>
+        <item>@mipmap/ic_slight_left</item>
+        <item>@mipmap/ic_slight_right</item>
+        <item>@mipmap/ic_continue</item>
+        <item>@mipmap/ic_empty</item> <!-- 20 -->
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_arrived</item>
+        <item>@mipmap/ic_arrived</item> <!-- 25 -->
+        <item>@mipmap/ic_arrived</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item> <!-- 30 -->
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_roundabout</item>
+        <item>@mipmap/ic_empty</item> <!-- 35 -->
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item>
+        <item>@mipmap/ic_empty</item> <!-- 39 -->
+    </string-array>
+</resources>

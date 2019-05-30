@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Aplicacion</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_perfil">Nombre</string>
+    <string name="usuario_perfil">Usuario</string>
+    <string name="password_perfil">Contraseña</string>
+    <string name="edad_perfil">Edad</string>
+    <string-array name="tipo_accesibilidad">
+        <item>Escalera</item>
+        <item>Rampa</item>
+        <item>Semáforo</item>
+        <item>Ascensor</item>
+        <item>Desnivel</item>
+        <item>Paso de peatones</item>
+        <item>Elevador</item>
+        <item>Pavimento</item>
+        <item>Acera</item>
+        <item>Parking</item>
+        <item>Baño</item>
+        <item>Obra</item>
+        <item>Señales</item>
+        <item>Rótulos</item>
+        <item>Folletos</item>
+        <item>Otros</item>
+    </string-array>
+</resources>

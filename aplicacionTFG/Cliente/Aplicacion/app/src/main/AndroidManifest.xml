@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sergi.aplicacion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegistroActivity"
+            android:label="Registro" />
+        <activity
+            android:name=".PerfilActivity"
+            android:label="Perfil" />
+        <activity
+            android:name=".ConfirmarActivity"
+            android:label="Elementos a confirmar" />
+        <activity
+            android:name=".ContribucionActivity"
+            android:label="Tu contribución" />
+        <activity
+            android:name=".SugerenciasActivity"
+            android:label="Sugerencias" />
+        <activity
+            android:name=".AjustesActivity"
+            android:label="Ajustes" />
+        <activity
+            android:name=".AyudaActivity"
+            android:label="Ayuda" />
+        <activity
+            android:name=".NuevoElemento"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ElementoAConfirmar"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".ItinerarioLista" />
+        <activity
+            android:name=".ElementoConfirmadoActivity"
+            android:hardwareAccelerated="false"></activity>
+    </application>
+
+</manifest>

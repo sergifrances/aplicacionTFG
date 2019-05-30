@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/perfil"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_confirmar"
+            android:icon="@drawable/marker2"
+            android:title="Confirmar elementos" />
+        <item
+            android:id="@+id/nav_contribucion"
+            android:title="Contribución" />
+        <item
+            android:id="@+id/nav_sugerencia"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Sugerencias" />
+        <!--item
+            android:id="@+id/nav_ajustes"
+            android:icon="@drawable/ajustes"
+            android:title="Ajustes" /-->
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/ayuda"
+            android:title="Ayuda" />
+    </group>
+
+</menu>
